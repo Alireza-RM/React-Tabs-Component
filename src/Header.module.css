@@ -1,0 +1,285 @@
+.header_container {
+  background-image: url("hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  /* background:linear-gradient(to right,orange,#02104d,silver); */
+  /* background-color: #02104d; */
+  color: white;
+  padding-bottom: 50px;
+  position: relative;
+  /* max-height: 900px;   */
+  background: linear-gradient(to left top, #02104d 30%, silver 50%, orange 70%);
+  background: linear-gradient(
+    to left top,
+    #02104d 30%,
+    silver 50%,
+    #f77e20 70%
+  );
+  background: linear-gradient(
+    to left top,
+    #02104d 40%,
+    silver 50%,
+    #f77e20 60%
+  );
+  background: linear-gradient(
+    to left top,
+    #02104d 47%,
+    silver 50%,
+    #02104d 53%
+  );
+  background: linear-gradient(
+    to left top,
+    #02104d 47%,
+    silver 50%,
+    #fed714 53%
+  );
+  background: linear-gradient(
+    /* to left top, */ to left,
+    #02104d 45%,
+    #fed714 49%,
+    #00bfff 50%,
+    #fed714 49%,
+    silver 55%
+  );
+  background: linear-gradient(
+    /* to left top, */ to left,
+    #02104d 45%,
+    #fed714 49%,
+    #00bfff 50%,
+    #fed714 49%,
+    silver 55%
+  );
+  /* background-size: 100% 900px; */
+}
+
+.top_bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 20px 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  /* box-shadow: 0px 0px 30px 0px rgb(250, 167, 83); */
+  /* position: sticky; */
+  /* top: 0; */
+  z-index: 100;
+  cursor: pointer;
+  /* width: 100% !important; */
+}
+
+.fix_top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.logo_name {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  background: linear-gradient(to right, #02104d, silver) center;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  animation: logoName-animate 25s linear infinite;
+}
+@keyframes logoName-animate {
+  to {
+    background-position-x: -2500px;
+  }
+}
+
+.logo_name .fa {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.logo_name .en {
+  font-family: "IR Nazanin", serif;
+  font-weight: 400;
+  direction: rtl;
+}
+/* Hero Section */
+.hero_section {
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.hero_content {
+  flex: 1;
+  text-align: right;
+}
+
+.hero_content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hero_content h2 {
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ffcc00;
+  color: #fed714;
+}
+
+.text_div {
+  background-color: rgba(30, 30, 31, 0.3);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.hero_content p {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align: justify;
+  opacity: 0.9;
+}
+.hero_image {
+  border-radius: 30px;
+  overflow: hidden;
+  height: 400px;
+  margin-top: 30px;
+}
+.hero_image img {
+  width: 100%;
+  height: 100%;
+}
+
+.consult_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.consult_button {
+  background-color: #fed714;
+  color: #02104d;
+  /* border: 1px solid #02104d; */
+  padding: 15px 30px;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  margin-bottom: 40px;
+  transition: background-color 0.3s ease;
+  max-width: 300px;
+  margin: 25px 0 !important;
+}
+
+.consult_button:hover {
+  background-color: #d0af0b;
+}
+
+.stats {
+  display: flex;
+  justify-content: start;
+  gap: 100px;
+}
+
+.stats span {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: right;
+  line-height: 1.5;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  padding: 0 20px;
+}
+/* Media Queries for Responsiveness */
+@media (min-width: 1280px) {
+  .hero_section {
+    padding: 60px 10px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header_container {
+    /* max-height: 750px !important; */
+  }
+
+  .text_div{
+    max-width: 450px;
+  }
+
+  .hero_section {
+    gap: 20px;
+  }
+  .hero_content h1 {
+    font-size: 4rem !important;
+  }
+  .hero_content h2 {
+    font-size: 2.8em !important;
+  }
+  .hero_content p {
+    font-size: 1.8rem !important;
+  }
+
+  .hero_image {
+    /* background-color: #00ff84; */
+    width: 448.5px !important;
+    width: 500px !important;
+    height: 600px !important;
+    overflow: hidden;
+  }
+  .consult_button {
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .header_container {
+    /* max-height: 700px; */
+  }
+  .logo img {
+    height: 60px;
+    width: 60px;
+  }
+  .hero_section {
+    flex-direction: row;
+    padding: 60px 20px;
+  }
+  .hero_image {
+    height: 480px;
+    width: calc(100% / 2.1);
+    margin-top: 0px;
+  }
+  .hero_content h1 {
+    font-size: 2.8em;
+  }
+  .hero_content h2 {
+    font-size: 1.8em;
+  }
+  .hero_content p {
+    font-size: 1.5em;
+  }
+  .consult_button {
+    font-size: 1.5em;
+  }
+  .stats {
+    align-items: center;
+    gap: 20px;
+  }
+}

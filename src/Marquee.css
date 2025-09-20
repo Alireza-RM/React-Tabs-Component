@@ -1,0 +1,118 @@
+.all {
+  width: 100%;
+  padding: 0;
+}
+
+.scrolling-content img.star-svg {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.our-scrolling-ticker {
+  padding: 15px 0;
+  margin: 20px 0;
+}
+
+.scrolling-ticker-box {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 40px;
+  align-items: center;
+}
+
+.scrolling-content {
+  flex-shrink: 0;
+  display: flex;
+  gap: 100px;
+  min-width: 100%;
+  animation: scroll 50s linear infinite;
+}
+
+.scrolling-content div {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  font-size: 1.2rem;
+}
+
+.logo_img {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px;
+}
+.logo_img img {
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.our-scrolling-ticker {
+  position: relative;
+  padding: 15px 0;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.our-scrolling-ticker::before,
+.our-scrolling-ticker::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.our-scrolling-ticker::before {
+  left: 0;
+  /* background: linear-gradient(to right, rgba(78, 195, 245, 0.3), transparent); */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), transparent);
+  backdrop-filter: blur(4px);
+}
+
+.our-scrolling-ticker::after {
+  right: 0;
+  background: linear-gradient(to left,  #f0f4f7, transparent);
+  backdrop-filter: blur(4px);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .scrolling-content {
+    flex-shrink: 0;
+    display: flex;
+    gap: 30px;
+    min-width: 100%;
+    animation: scroll 50s linear infinite;
+  }
+
+  .scrolling-content div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 1rem;
+  }
+
+  .scrolling-content img.star-svg {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+}

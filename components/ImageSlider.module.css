@@ -1,0 +1,119 @@
+.slider_container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.main_slider {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.main_slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.image_wrapper {
+  position: relative;
+}
+
+.zoom_btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 22px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.zoom_btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* دکمه‌های ناوبری */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 30px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.7);
+  background: #ff6600;
+  background-color: #ff6600;
+}
+
+/* نقاط pagination */
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #ff6600;
+}
+
+/* thumbnail wrapper (مخفی روی موبایل) */
+.thumbs_wrapper {
+  display: none;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .thumbs_wrapper {
+    display: block;
+  }
+}
+
+/* thumbnail slider */
+.thumbs_slider img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.thumbs_slider .swiper-slide-thumb-active img {
+  border: 2px solid #ff6600;
+}
+
+/* مودال تمام‌صفحه */
+.fullscreen_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fullscreen_overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  cursor: zoom-out;
+}

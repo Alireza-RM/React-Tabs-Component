@@ -1,0 +1,140 @@
+.container {
+  background-color: #333333;
+  color: #fff;
+  padding: 20px;
+  margin-top: 50px;
+}
+.all {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.listItems {
+  display: flex;
+  flex-direction: column;
+  gap: 80px !important;
+  margin: 60px 0;
+}
+
+.listItems div {
+  display: grid;
+  grid-template-columns: auto;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listItems p {
+  font-size: 1.7rem;
+}
+
+.listItems ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listItems li {
+  font-size: 1.5rem;
+  border-right: 1px solid #fff;
+  padding-right: 10px;
+}
+
+.listItems li p {
+  transition: all 0.15s ease-in;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.listItems li p {
+  width: max-content;
+}
+
+.listItems li:nth-child(even) p:hover {
+  color: #00bfff !important;
+  border-bottom: 1px solid #00bfff !important;
+}
+.listItems li p:nth-child(odd):hover {
+  color: #fed714;
+  border-bottom: 1px solid #fed714;
+}
+
+.headList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.div_loc {
+  display: grid;
+  grid-template-columns: auto auto !important;
+  justify-content: start;
+  align-items: center;
+  gap: 10px !important;
+}
+
+.location {
+  width: 15px;
+  height: 15px;
+  display: inline;
+}
+
+.icons {
+  display: flex !important;
+  flex-direction: row !important;
+  /* background-color: #00bfff; */
+}
+
+.icons div {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.logo_sabt {
+  display: grid;
+  grid-template-columns: auto auto !important;
+  justify-content: start;
+}
+
+.logo_sabt img {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.author {
+  width: 100%;
+  display: flex;
+  padding: 8px;
+  color:#fff ;
+  background-color: #333333;
+  border-top: 1px solid #f0f4f7 !important ;
+  /* border-bottom: 1px solid #f0f4f7 !important ; */
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .listItems {
+    display: grid;
+    grid-template-columns: auto auto auto !important;
+  }
+}
+@media (min-width: 1024px) {
+  .listItems {
+    display: grid;
+    grid-template-columns: auto auto auto auto !important;
+  }
+  .logo_sabt {
+    align-items: end;
+  }
+}

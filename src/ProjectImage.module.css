@@ -1,0 +1,81 @@
+.container {
+  padding: 20px;
+  margin-top: 50px;
+  /* background-color: red; */
+}
+.all {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin: auto;
+  max-width: 1280px;
+  /* box-shadow: -10px -10px 30px 0px  rgba(0, 191, 255, 0.5) , 20px 20px 30px 0px  rgba(254, 215, 20, 0.5); */
+  box-shadow: -5px -5px 20px 0px rgba(0, 191, 255, 0.5),
+    8px 8px 10px 0px rgba(254, 215, 20, 0.5);
+}
+
+.headList h4 {
+  margin-bottom: 5px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.headList p {
+  font-size: 2rem;
+  padding-right: 8px;
+}
+
+.nameList ul {
+  /* background-color: aquamarine; */
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  margin: 20px;
+  border-bottom: 1px solid #fed714;
+}
+.nameList ul li {
+  display: flex;
+  flex: 1 0 100px;
+  justify-content: center;
+  padding: 5px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.nameList ul li p {
+  border-radius: 50%;
+  padding: 8px;
+  border-bottom: 5px solid transparent;
+  animation: all 0.2s ease-in;
+}
+
+.selectImg {
+  background-color: #fed714;
+  border-bottom: 5px solid #00bfff !important;
+}
+
+@media (min-width: 768px) {
+  .all {
+    display: flex;
+  }
+
+  .nameList ul {
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid #fed714;
+    border-bottom: none;
+  }
+  .nameList ul li {
+    flex: 1 0 0px;
+    justify-content: start;
+  }
+
+  .nameProject {
+    width: 35%;
+  }
+  .sliderDiv {
+    width: 70%;
+  }
+}
